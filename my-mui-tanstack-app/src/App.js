@@ -9,6 +9,7 @@ import EmployeePanel from "./EmployeePanel";
 import Navbar from "./Navbar";
 import CountdownTimer from "./CountdownTimer";
 import StudentPanel from "./StudentPanel";
+import { CountdownProvider } from "./CountdownContext";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,6 +31,7 @@ function App() {
       <Button onClick={toggleTheme} variant="contained" style={{ margin: "16px",float:"right" }}>
         Toggle {darkMode ? "Light" : "Dark"} Mode
       </Button>
+      <CountdownProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -44,6 +46,7 @@ function App() {
           <Route path="/student" element={<StudentPanel />} />
         </Routes>
       </Router>
+      </CountdownProvider>
     </ThemeProvider>
   );
 }
