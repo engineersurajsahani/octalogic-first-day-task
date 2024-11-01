@@ -27,7 +27,7 @@ function CreateEmployee() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries(["employee"]);
-      navigate("/");
+      navigate("/employee");
     },
   });
 

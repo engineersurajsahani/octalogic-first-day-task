@@ -42,7 +42,7 @@ function UpdateEmployee() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries(["employee"]);
-      navigate("/");
+      navigate("/employee");
     },
   });
 
